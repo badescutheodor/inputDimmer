@@ -17,11 +17,11 @@ body.id-on:before, body.id-off:before {
     height: 100%;
     position: absolute;
     content: "";
-    /* highest Safari 3 accepted z-index - 2 */
-    z-index: 16777269;
 }
 
 body.id-on:before {
+    /* highest Safari 3 accepted z-index - 2 */
+    z-index: 16777269;
     animation: id-on-a .3s ease-in forwards;
 }
 
