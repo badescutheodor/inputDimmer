@@ -2,7 +2,7 @@
 * ========================================
 * @name    Input Dimmer CSS
 * @creator Badescu Theodor<theo@btheo.com>
-* @version 0.1b
+* @version 1.0
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * ========================================
 */
@@ -17,7 +17,8 @@ body.id-on:before, body.id-off:before {
     height: 100%;
     position: absolute;
     content: "";
-    z-index: 1;
+    /* highest Safari 3 accepted z-index - 2 */
+    z-index: 16777269;
 }
 
 body.id-on:before {
@@ -35,8 +36,12 @@ body.id-off:before {
 * ===================
 */
 .id-dimmed {
+    /* highest Safari 3 accepted z-index - 1 */
+    z-index: 16777270;
+}
+
+.id-r {
     position: relative;
-    z-index: 2;
 }
 
 /**

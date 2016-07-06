@@ -28,8 +28,30 @@
 </style>
 
 <div class="container">
-    <textarea class="id-dimmer"></textarea>
+    <textarea></textarea>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="../min/id.min.js"></script>
+<script>
+    $("textarea").inputDimmer({
+        open: function() {
+            alert("opened");
+        },
+
+        close: function() {
+            alert("closed");
+        }
+    });
+
+    setTimeout(function() {
+        $("textarea").inputDimmer("close", function() {
+            alert("done");
+        });
+    }, 3000);
+
+
+    setTimeout(function() {
+        $("textarea").inputDimmer("destroy");
+    }, 5000);
+</script>
